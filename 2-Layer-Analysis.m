@@ -41,7 +41,7 @@ for n2 = n2_start:0.1:n2_end;
     lambda_c = 650*power(10, -9); % Centered wavelength in meters
     
     % Calculate TMM
-    %loop over the wavelength provided in design study 200nm to 2200nm
+    % Loop over the wavelength provided in design study 200nm to 2200nm
     for lambda_range = 200:2200;
         lambda = lambda_range*power(10,-9);
         delta = (pi/2).*(lambda_c/(lambda));
@@ -60,8 +60,8 @@ for n2 = n2_start:0.1:n2_end;
         strings(count) = {string};
         Intensity = 6.16*power(10,15)/(power(lambda_range, 5)*(exp(2484/lambda_range) - 1));
         
-        % remove semi colan below to display total power. Add it before
-        % running it for a larger range of n2
+        % Remove semi colon below to display total power. Add it before
+        % Running it for a larger range of n2
         total_power(count) = total_power(count) + Transmitivity*Intensity;
 
         
