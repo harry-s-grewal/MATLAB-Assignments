@@ -8,26 +8,14 @@ w0=1;
 x=c0;
 N=50;
 for n=1:N
-    n
-    
-    %for exponential wave
-    %a0=0.504;
-    %c(n)=0.504*(2/sqrt(1+16*(n^2)));
-    %theta(n)=-atan(4*n);
-    
-    %for sawtooth
-    c0=0.5;
-    c(n)=1/(pi*n);
-    theta(n)=pi/2;
-    
-    
-    %for square wave
-    %a0=0.5;
-    %c(n)=abs((2/(n*pi))*sin(n*pi/2));  
-    %if rem(n,4)==3                          
-    %    theta(n)=-pi;
-    %else theta(n)=0;
-    %end
+   
+    % square wave
+    a0=0.5;
+    c(n)=abs((2/(n*pi))*sin(n*pi/2));  
+    if rem(n,4)==3                          
+        theta(n)=-pi;
+    else theta(n)=0;
+    end
     
     c(n)
     theta(n)
