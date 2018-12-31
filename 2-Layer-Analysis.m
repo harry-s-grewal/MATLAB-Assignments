@@ -41,7 +41,7 @@ for n2 = n2_start:0.1:n2_end;
     lambda_c = 650*power(10, -9); % Centered wavelength in meters
     
     % Calculate TMM
-    %loop over the wavelegnth provided in design study 200nm to 2200nm
+    %loop over the wavelength provided in design study 200nm to 2200nm
     for lambda_range = 200:2200;
         lambda = lambda_range*power(10,-9);
         delta = (pi/2).*(lambda_c/(lambda));
